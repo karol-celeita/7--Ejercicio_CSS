@@ -24,13 +24,12 @@ a:hover{
 	max-width: 960px;
 	max-height: 500px;
 	width: 100%;
-	height: 100%;
+	height: 80vh;
 	background-color:#fff;
 	/* box-shadow: difhorizontal difvertical desenfoque amplitud color */
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) ;
 	border-radius: 20px;
 	position: relative;
-	padding: 1.8em;
 }
 
 .actions{
@@ -109,11 +108,38 @@ Even:solita pares y odd solicita impares**/
 
 }
 
+	.content{
+		padding: 1em;
+}
+
+	/*Trasponer la tabla */
+
+	td{
+		display: block;
+		width: 100%;
+	}
+
+	/*Pseudo clase: ayuda al selector. 
+	Pseudo elemento: Se modifica cuando cambia el estado de un selector; */
+
+	td:nth-of-type(1){
+		color: #642B73;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	th{
+		display: none;
+	}
+
+
 .address {
 	font-weight: bold;
 	color: #642B73;
 	font-size: 1.2em;
 	margin-bottom: 0.5em;
+	margin-top: 1em;
+	display: inline-block;
 
 }
 
@@ -121,5 +147,41 @@ Even:solita pares y odd solicita impares**/
 	float: left;
 	margin-right: 1em;
 	height: 250px;
+
+}
+
+@media (min-height:  550px){
+	.content{
+		height: 500px;
+	}
+}
+
+@media (min-height:  900px){
+
+	.content{
+		padding: 1em;
+}
+
+	/*Trasponer la tabla */
+
+	td{
+		display: table-cell;
+		width: auto;
+
+	}
+
+	
+	td:nth-of-type(1){
+		font-size: 1em;
+
+		.content{ 
+			padding: 1.8em;
+
+		}
+	}
+
+	th{
+		display: table-cell;
+	}
 
 }
